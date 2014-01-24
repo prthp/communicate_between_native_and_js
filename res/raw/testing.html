@@ -1,0 +1,24 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<title>Testing</title>
+<script type="text/javascript">
+	function showAndroidToast(toast) {
+		Android.showToast(toast);
+	}
+	function onComplete(success, msg) {
+		Android.onComplete(success, msg);
+	}
+	function updateContent(content) {
+		document.getElementById("content").innerHTML = content;
+	}
+</script>
+</head>
+<body>
+	<input type="button" value="Say hello" onClick="showAndroidToast('Hello Android!')" />
+	<input type="button" value="Success" onClick="onComplete(true, 'Completed!')" />
+	<input type="button" value="Fail" onClick="onComplete(false, 'Completed!')" />
+	<div id="content" />
+</body>
+</html>
